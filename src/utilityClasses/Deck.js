@@ -23,7 +23,16 @@ class Deck {
 
     shuffle(){
         //I take a new deck of cards and shuffle the crap out of them
-        console.log("shuffling")
+        console.log("shuffling");
+        for(let i = 0; i < 10000000; i++){
+            //to shuffle, swap 2 indices in the array many many times
+            let rand1 = Math.floor(Math.random() * 52);
+            let rand2 = Math.floor(Math.random() * 52);
+            //store value in this.deck[rand1] in a temp var
+            let temp = this.cards[rand1];
+            this.cards[rand1] = this.cards[rand2];
+            this.cards[rand2] = temp;
+        }
     }
 }
 
