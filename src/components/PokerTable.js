@@ -21,6 +21,8 @@ class PokerTable extends Component{
     //this method is made by us, not a "react" method
     //in here we deal the first 4 cards
     prepDeck = () => {
+        this.deck.create();
+        this.deck.shuffle();
         const card1 = this.deck.cards.shift();
         const card2 = this.deck.cards.shift();
         const card3 = this.deck.cards.shift();

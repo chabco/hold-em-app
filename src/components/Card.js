@@ -1,8 +1,11 @@
 import React from 'react';
 
 function Card(props) {
+    const thisCard = `/cards/${props.card}.png`
     return(
-        <h1>Card</h1>
+        <div className="col-sm-2 card">
+            <img alt="img" src={thisCard} />
+        </div>
     )
 }
 
